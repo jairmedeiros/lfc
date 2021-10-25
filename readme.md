@@ -18,5 +18,5 @@ cf -c docker_name_database
 
 ```
 
-## !Important
+## <span style="color:red; font-weight: bold">!Important</span>
 This tool will only work on liferay environment
