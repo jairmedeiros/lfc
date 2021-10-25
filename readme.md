@@ -1,4 +1,4 @@
-#Liferay-tool
+# Liferay-tool
 
 Liferay tool is a tool to manage local environment in some tasks, such as cleaning database, cleaning git cache, tomcat folders and docker db
 
@@ -18,5 +18,5 @@ cf -c docker_name_database
 
 ```
 
-## <span style="color:red; font-weight: bold">!Important</span>
-This tool will only work on liferay environment
+## <span style="color: red; font-weight:bold;">!Important</span>
+This tool will only work on liferay environment and liferay's workstations
