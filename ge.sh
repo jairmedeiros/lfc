@@ -2,39 +2,48 @@
 clean_tomcat(){
 	FILE=~/dev/bundles/master/portal-setup-wizard.properties
 	if test -f "$FILE"; then
+		echo "========= Running clean tomcat directories ========="
 		mv ~/dev/bundles/master/portal-setup-wizard.properties ~/dev/bundles/portal-setup-wizard.properties
 		rm -rf ~/dev/bundles/master/
 		mkdir ~/dev/bundles/master/
 		mv ~/dev/bundles/portal-setup-wizard.properties ~/dev/bundles/master/portal-setup-wizard.properties
+		echo "========= DONE ========="
 	else
-		echo "$FILE doesn't exists."
+		echo "========= $FILE doesn't exists ========="
+		exit 1;
 	fi
 }
 
 clean_git(){
 	FILE=~/dev/projects/liferay-portal/app.server.me.properties
 	if test -f "$FILE"; then
+		echo "========= Running clean git untracked build files ========="
 		mv ~/dev/projects/liferay-portal/app.server.me.properties ~/dev/projects/app.server.me.properties
 		git -C ~/dev/projects/liferay-portal/ clean -dfx
 		mv ~/dev/projects/app.server.me.properties ~/dev/projects/liferay-portal/app.server.me.properties
+		echo "========= DONE ========="
 	else
-		echo "$FILE doesn't exists."
+		echo "========= $FILE doesn't exists ========="
+		exit 1;
 	fi
 }
 
 force_ant(){
-	echo "running ant commands"
+	echo "========= Running ant scripts ========="
 	cd ~/dev/projects/liferay-portal
 	ant clean
 	ant all
 	cd -
+	echo "========= DONE ========="
 }
 
 clean_db(){
 	if [ -z "$2" ]; then
+		echo "========= Clean database ========="
 		echo 'DROP DATABASE lportal; CREATE DATABASE lportal;' > temp_sql.sql && \
 		docker exec -i $container mysql < temp_sql.sql && \
 		rm temp_sql.sql
+		echo "========= DONE ========="
 	fi
 }
 
