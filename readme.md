@@ -8,7 +8,7 @@ Clone this repo in some folder of your choice, and then create an alias to ge.sh
 
 ### Example
 
-alias cf="sh ~/home/me/dev/<username>/lfc/ge.sh"
+alias cf="sh ~/home/me/dev/username/lfc/ge.sh"
 
 ## Usage
 
