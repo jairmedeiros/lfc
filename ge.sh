@@ -489,7 +489,11 @@ else
         if [ "$show_help" = true ]; then
             show_tomcat_help
         else
-            run_tomcat && run_ant
+            run_tomcat
+
+            if [ "$only_cache" = false ]; then
+                run_ant
+            fi
         fi
         exit
         ;;
