@@ -302,7 +302,7 @@ while :; do
     --only-cache)
         case $command in
         --all | -t | --tomcat)
-            only-cache=true
+            only_cache=true
             ;;
         -d | --database)
             show_database_help >&2
