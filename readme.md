@@ -8,13 +8,13 @@ Clone this repo in some folder of your choice, and then create an alias to ge.sh
 
 ### Example
 
-alias cf="sh ~/dev/projects/lfc/ge.sh"
+alias lfc="sh ~/dev/projects/lfc/ge.sh"
 
 ## Usage
 
 ```bash
-#this command perform all the cleanings and erase the database on [docker_name_database] which is on a docker cotainer
-cf -c docker_name_database
+#this command perform all the cleanings and erase the database
+lfc --all
 
 ```
 
