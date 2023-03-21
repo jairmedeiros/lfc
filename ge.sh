@@ -138,7 +138,7 @@ run_tomcat() {
 
         if [ "$only_cache" = true ]; then
             printf 'Removing cache directories...\n'
-            rm -rf "$dir/data $dir/elasticsearch* $dir/osgi/state" $dir/tomcat-*/temp $dir/tomcat-*/work
+            rm -rf "$dir/data $dir/elasticsearch* $dir/osgi/state $dir/tomcat-*/temp $dir/tomcat-*/work"
 
             printf 'The tomcat has been successfully cleaned!\n\n\n'
         else
